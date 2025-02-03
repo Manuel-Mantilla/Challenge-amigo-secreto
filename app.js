@@ -22,3 +22,21 @@ function agregarListaAmigosHttp(lista) {
         listaAmigosHttp.appendChild(li); // Insertar <li> en <ul>
     });
 }
+
+function sortearAmigo() {
+    let nombre = listaDeAmigos[Math.floor(Math.random() * listaDeAmigos.length)];
+    mostrarAmigoSecreto(nombre);
+}
+
+function mostrarAmigoSecreto(nombreAmigo) {
+    let resultadoHttp = document.getElementById("resultado");
+    let li = document.createElement("li");
+    li.textContent = `¡🥳 Felicidades, tu amigo secreto es ${nombreAmigo} 🎁!`;
+    resultadoHttp.appendChild(li);
+    limpiarListaAmigosHttp();
+}
+
+function limpiarListaAmigosHttp() {
+    let listaAmigosHttp = document.getElementById("listaAmigos");
+    listaAmigosHttp.innerHTML = "";
+}
