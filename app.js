@@ -1,11 +1,11 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-let listaDeAmigos = []
+let listaDeAmigos = [];
 
 // Función que se activa dando click en el botón "Añadir"
 function agregarAmigo() {
     let nombreAmigo = document.getElementById("amigo").value; // Guarda el texto ingresado (value) del elemento con id="amigo"
     if (nombreAmigo.trim() === "") { // Trim elimina los espacios en blanco al comienzo y fin del texto ingresado
-        alert("!Por favor ingrese un nombre valido¡"); // Si el nombre ingresado esta vacio muestra una alerta
+        alert("!Por favor ingrese un nombre válido¡"); // Si el nombre ingresado esta vacio muestra una alerta
     } else {
         listaDeAmigos.push(nombreAmigo); // Agrega el nombre a una lista
         agregarListaAmigosHttp(listaDeAmigos); // Llama a la función agregarListaAmigosHttp 
@@ -14,8 +14,8 @@ function agregarAmigo() {
 
 // Función para mostrar la lista de nombres en pantalla
 function agregarListaAmigosHttp(lista) {
-    let listaAmigosHttp = document.getElementById("listaAmigos") // Crear un objeto usando el identificador "listaAmigos"
-    listaAmigosHttp.innerHTML = "" // Limpia el contenido de "listaAmigosHttp"
+    let listaAmigosHttp = document.getElementById("listaAmigos"); // Crear un objeto usando el identificador "listaAmigos"
+    listaAmigosHttp.innerHTML = ""; // Limpia el contenido de "listaAmigosHttp"
     lista.forEach(elemento => {
         let li = document.createElement("li"); // Crear un elemento <li>
         li.textContent = elemento; // Agregar el texto al <li>
